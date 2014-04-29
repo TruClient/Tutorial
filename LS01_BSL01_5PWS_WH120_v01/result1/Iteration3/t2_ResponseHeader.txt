@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: Lightstreamer/5.1.1 build 1623.2 (Lightstreamer Push Server - www.lightstreamer.com) Moderato edition
+Content-Type: text/javascript; charset=iso-8859-1
+Cache-Control: no-store
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: Thu, 1 Jan 1970 00:00:00 GMT
+Date: Thu, 10 Apr 2014 15:04:12 GMT
+Content-Length: 345
+

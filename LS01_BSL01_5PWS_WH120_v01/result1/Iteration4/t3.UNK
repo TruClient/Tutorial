@@ -1,0 +1,122 @@
+Å~¸var myEnv = lsc;
+var phase = null;
+function setPhase(ph) {
+ phase = ph;
+}
+
+var winPhase = {};
+function setWin(tbl, ph) {
+ winPhase[tbl] = ph;
+}
+
+var clsd = false;
+function c(cod, ph, tbl, its, flds, key, com) {
+ LS_window.LS_w(cod, ph, tbl, its, flds, key, com);
+}
+
+function error(cod, ph, tbl, msg) {
+ if (tbl != null) {
+  LS_window.LS_l(cod, ph, tbl, msg);
+ } else {
+  LS_window.LS_l(cod, phase, null, msg);
+ }
+}
+
+function start(sID, addr, kaMs, reqLim, srv) {
+ LS_window.LS_e(1, phase, sID, addr, kaMs, reqLim, srv);
+}
+
+function end(cause) {
+ LS_window.LS_e(4, phase, cause);
+}
+
+function loop(holdMs) {
+ LS_window.LS_e(2, phase, holdMs);
+}
+
+function retry() {
+ LS_window.LS_e(3, phase);
+}
+
+function bw(maxBW) {
+ LS_window.LS_e(5, phase, maxBW);
+}
+
+function y(secs) {
+ LS_window.LS_s(phase, secs);
+}
+
+var unchangedSignal = {};
+unchangedSignal.length = -1;
+function convert(b, f) {
+  var a, c, d = f, e = [];
+  for(a = 0;a < b.length;a++) {
+    if(a < f) {
+      e[a] = b[a]
+    } else {
+      if(b[a].charAt) {
+        b[a] == '$' ? e[d] = '' : b[a] == '#' ? e[d] = null : (c = b[a].charAt(0), e[d] = c == '$' || c == '#' ? b[a].substring(1) : b[a]), d++
+      } else {
+        for(c = 0;c < b[a];c++) {
+          e[d] = unchangedSignal, d++
+        }
+      }
+    }
+  }
+  return e;
+}
+function d(tbl) {
+ try { LS_window.LS_u(winPhase[tbl], convert(d.arguments, 2)); } catch(exc) {}
+}
+function z(tbl) {
+ LS_window.LS_v(winPhase[tbl], convert(z.arguments, 2));
+}
+function n(tbl) {
+ LS_window.LS_n(winPhase[tbl], n.arguments);
+}
+function r(tbl) {
+ LS_window.LS_o(winPhase[tbl], r.arguments);
+}
+function p() {
+ LS_window.LS_u(phase, p.arguments);
+}
+myEnv.setPhase = setPhase;
+myEnv.setWin = setWin;
+myEnv.c = c;
+myEnv.error = error;
+myEnv.end = end;
+myEnv.start = start;
+myEnv.loop = loop;
+myEnv.retry = retry;
+myEnv.bw = bw;
+myEnv.y = y;
+myEnv.convert = convert;
+myEnv.d = d;
+myEnv.z = z;
+myEnv.n = n;
+myEnv.r = r;
+myEnv.p = p;
+myEnv.LS_window = LS_window;
+
+// END OF HEADER
+
+setPhase(303);
+start('Seab0dfb24129eeb3T0514548', null, 5000, 50000);
+Å	bw(0.0);
+Å~;c(6,30,1,10,12,-1,-1);setWin(1,30);z(1,1,'Anduct','2.61','15:05:16','-14.14','94000','2.61','2.62','47500','2.61','3.19','3.04','3.1');z(1,2,'Ations Europe','14.93','15:05:16','-7.2','96000','14.93','14.97','82500','13.23','18.67','16.09','16.2');z(1,3,'Bagies Consulting','7.46','15:05:16','3.75','16000','7.44','7.46','18500','6.47','8.04','7.19','7.25');z(1,5,'CON Consulting','8.36','15:05:16','9.85','40500','8.35','8.36','2000','7.08','8.36','7.61','7.65');z(1,4,'BAY Corporation','3.81','15:05:16','4.95','82000','3.8','3.81','39000','3.62','3.81','3.63','3.62');
+Å~
+z(1,6,'Corcor PLC','2.2','15:05:16','-4.34','88000','2.2','2.21','59500','2.18','2.44','2.3','2.3');z(1,10,'ELE Manufacturing','8.0','15:05:16','5.12','80000','7.99','8.0','55000','7.44','8.44','7.61','7.7');z(1,9,'Dentems','4.55','15:05:16','-6.37','35000','4.54','4.55','15500','4.53','5.24','4.86','4.97');z(1,8,'Datio PLC','4.85','15:05:16','-8.66','35500','4.83','4.85','81500','4.56','5.31','5.31','5.31');z(1,7,'CVS Asia','14.94','15:05:16','-2.92','49500','14.89','14.94','61000','13.39','16.69','15.39','15.85');
+Åwd(1,2,1,'14.79','15:05:17','-8.07','28000','14.78','14.79','14500',4);d(1,3,2,'15:05:17',1,'56000','7.45',1,'2500',4);
+ÅEd(1,2,1,'14.78','15:05:18','-8.14','11500','14.77','14.78','500',4);
+ÅDd(1,10,1,'7.96','15:05:19','4.59','62500','7.96','7.97','57000',4);
+ÅGd(1,7,1,'14.92','15:05:19','-3.05','90500','14.86','14.92','80500',4);
+ÅGd(1,2,1,'14.76','15:05:19','-8.26','71500','14.76','14.82','50500',4);
+ÅMy(5);
+d(1,2,1,'14.75','15:05:20','-8.32','82000','14.75','14.77','49000',4);
+ÅDd(1,9,1,'4.54','15:05:20','-6.58','17000','4.53','4.54','31000',4);
+ÅBd(1,8,1,'4.88','15:05:21','-8.09','6500','4.88','4.9','51000',4);
+ÅCd(1,5,1,'8.29','15:05:21','8.93','53000','8.26','8.29','97000',4);
+ÅAd(1,3,1,'7.4','15:05:21','2.92','14000','7.38','7.4','55500',4);
+ÅGd(1,2,1,'14.82','15:05:21','-7.89','94500','14.82','14.85','36000',4);
+ÅGd(1,7,1,'15.01','15:05:22','-2.46','22000','15.01','15.03','65000',4);
+ÅGd(1,2,1,'14.68','15:05:22',

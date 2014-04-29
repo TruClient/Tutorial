@@ -1,0 +1,6 @@
+[t1]
+PassCount=1
+Pass1=t1
+[t3]
+PassCount=1
+Pass1=t2

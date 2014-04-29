@@ -1,0 +1,9 @@
+HTTP/1.1 101 Switching Protocols
+Server: Lightstreamer/5.1.1 build 1623.2 (Lightstreamer Push Server - www.lightstreamer.com) Moderato edition
+Connection: Upgrade
+Upgrade: websocket
+Sec-WebSocket-Accept: p20ID1SsfYFYR91zL6JmVULJrLA=
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Protocol: js.lightstreamer.com
+Date: Thu, 10 Apr 2014 15:05:14 GMT
+
