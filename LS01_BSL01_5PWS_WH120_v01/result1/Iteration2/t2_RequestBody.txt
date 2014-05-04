@@ -1,2 +1,0 @@
-"LS_phase=301&LS_cause=new.api&LS_polling=true&LS_polling_millis=0&LS_idle_millis=0&LS_client_v"
-"ersion=6.0&LS_adapter_set=DEMO&LS_container=lsc"

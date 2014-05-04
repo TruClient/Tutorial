@@ -1,0 +1,39 @@
+Virtual User Script started at : 2014-05-02 08:45:32
+Starting action vuser_init.
+TruClient Replay for LoadRunner 12.0.0, build 1362. OS: Windows 7, initialized on 2014/05/02 at 08:45:32 (0000.000s)
+t=00000269ms: ** 1: Evaluate JavaScript code var T02X_StockList_Change_iteration = 0; ** started    [MsgId: MMSG-205180]
+t=00000571ms: ** 1: Evaluate JavaScript code var T02X_StockList_Change_iteration = 0; ** successfully completed    [MsgId: MMSG-205180]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Notify: Transaction "T01_Landing" started.
+t=00001153ms: ** 1: Navigate to 'http://' +  TC.getParam...olioDemo_Basic/' ** started    [MsgId: MMSG-205180]
+t=00001984ms: ** 1: Navigate to "http://54.188.18.140/de...olioDemo_Basic/" ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T01_Landing" ended with "Pass" status (Duration: 0.8394 Think Time: 0.2010).
+t=00001997ms: ** 4: Evaluate JavaScript code // Hard code values: var...itemQuant="200"; ** started    [MsgId: MMSG-205180]
+t=00002262ms: ** 4: Evaluate JavaScript code // Hard code values: var...itemQuant="200"; ** successfully completed    [MsgId: MMSG-205180]
+t=00002275ms: ** 8: If (true) ** started    [MsgId: MMSG-205180]
+t=00002800ms: ** 8.1: Select itemText from listbox (1) listbox ** started    [MsgId: MMSG-205180]
+t=00002908ms: ** 8.1: Select itemText from listbox (1) listbox ** successfully completed    [MsgId: MMSG-205180]
+t=00003419ms: ** 8.4: Type itemQuant in textbox (1) textbox ** started    [MsgId: MMSG-205180]
+t=00004784ms: ** 8.4: Type "200" in textbox (1) textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00004811ms: ** 8.5: Evaluate JavaScript code // Start Sell xtrans &am..."+itemText+"."); ** started    [MsgId: MMSG-205180]
+t=00004857ms: >> 1 Buy 200 item1.    [MsgId: MMSG-205180]
+t=00005211ms: ** 8.5: Evaluate JavaScript code // Start Sell xtrans &am..."+itemText+"."); ** successfully completed    [MsgId: MMSG-205180]
+t=00005739ms: ** 8.6: Click on Sell button ** started    [MsgId: MMSG-205180]
+t=00006020ms: ** 8.6: Click on Sell button ** successfully completed    [MsgId: MMSG-205180]
+t=00006039ms: ** 8.7: Wait Math.floor(11*Math.random()) + 5; seconds ** started    [MsgId: MMSG-205180]
+t=00020309ms: ** 8.7: Wait 14 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00020335ms: ** 8.8: Evaluate JavaScript code // Start Sell xtrans &am...t+" "+itemText); ** started    [MsgId: MMSG-205180]
+t=00020382ms: >> 2 Sell 200 item1    [MsgId: MMSG-205180]
+t=00020601ms: ** 8.8: Evaluate JavaScript code // Start Sell xtrans &am...t+" "+itemText); ** successfully completed    [MsgId: MMSG-205180]
+t=00021122ms: ** 8.9: Click on Buy button ** started    [MsgId: MMSG-205180]
+t=00021407ms: ** 8.9: Click on Buy button ** successfully completed    [MsgId: MMSG-205180]
+t=00021424ms: ** 8: If (true) ** successfully completed    [MsgId: MMSG-205180]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

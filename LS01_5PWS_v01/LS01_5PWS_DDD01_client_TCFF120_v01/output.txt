@@ -1,0 +1,56 @@
+Virtual User Script started at : 2014-05-02 10:28:32
+Starting action vuser_init.
+TruClient Replay for LoadRunner 12.0.0, build 1362. OS: Windows 7, initialized on 2014/05/02 at 10:28:30 (0000.000s)
+t=00001868ms: ** 1: Evaluate JavaScript code var jTransIteration = 0; ** started    [MsgId: MMSG-205180]
+t=00002071ms: ** 1: Evaluate JavaScript code var jTransIteration = 0; ** successfully completed    [MsgId: MMSG-205180]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+t=00002603ms: ** 1: Navigate to 'http://' +  TC.getParam...os/DropDownDemo' ** started    [MsgId: MMSG-205180]
+t=00003399ms: ** 1: Navigate to "http://54.188.18.140/demos/DropDownDemo" ** successfully completed    [MsgId: MMSG-205180]
+t=00003904ms: ** 2: Evaluate JavaScript var optionNamesSet = {};...NamesAndCount(); on DROP DOWN DEMO item1item...5item16item17... listbox ** started    [MsgId: MMSG-205180]
+t=00004119ms: ** 2: Evaluate JavaScript [Code] on DROP DOWN DEMO item1item...5item16item17... listbox ** successfully completed    [MsgId: MMSG-205180]
+t=00004121ms: ** 3: For (var i = 0; true; i++) ** started    [MsgId: MMSG-205180]
+t=00004124ms: ** 3: For loop 1 ** started    [MsgId: MMSG-205180]
+t=00004127ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00005336ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00005339ms: ** 3: For loop 1 ** ended    [MsgId: MMSG-205180]
+t=00005341ms: ** 3: For loop 2 ** started    [MsgId: MMSG-205180]
+t=00005346ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00006557ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00006561ms: ** 3: For loop 2 ** ended    [MsgId: MMSG-205180]
+t=00006562ms: ** 3: For loop 3 ** started    [MsgId: MMSG-205180]
+t=00006568ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00007779ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00007784ms: ** 3: For loop 3 ** ended    [MsgId: MMSG-205180]
+t=00007785ms: ** 3: For loop 4 ** started    [MsgId: MMSG-205180]
+t=00007791ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00009002ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00009005ms: ** 3: For loop 4 ** ended    [MsgId: MMSG-205180]
+t=00009006ms: ** 3: For loop 5 ** started    [MsgId: MMSG-205180]
+t=00009011ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00010221ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00010224ms: ** 3: For loop 5 ** ended    [MsgId: MMSG-205180]
+t=00010225ms: ** 3: For loop 6 ** started    [MsgId: MMSG-205180]
+t=00010231ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00011445ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00011449ms: ** 3: For loop 6 ** ended    [MsgId: MMSG-205180]
+t=00011451ms: ** 3: For loop 7 ** started    [MsgId: MMSG-205180]
+t=00011459ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00012674ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00012677ms: ** 3: For loop 7 ** ended    [MsgId: MMSG-205180]
+t=00012678ms: ** 3: For loop 8 ** started    [MsgId: MMSG-205180]
+t=00012683ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00013894ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00013897ms: ** 3: For loop 8 ** ended    [MsgId: MMSG-205180]
+t=00013899ms: ** 3: For loop 9 ** started    [MsgId: MMSG-205180]
+t=00013903ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00015115ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00015118ms: ** 3: For loop 9 ** ended    [MsgId: MMSG-205180]
+t=00015119ms: ** 3: For loop 10 ** started    [MsgId: MMSG-205180]
+t=00015125ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

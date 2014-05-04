@@ -1,0 +1,10 @@
+Virtual User Script started at : 2014-04-29 20:59:12
+Starting action vuser_init.
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+t=00001552ms: Warning -205179: --->Anduct    [MsgId: MWAR-205179]
+Ending action Action.
+Ending iteration 1.
+Abort was called from an action

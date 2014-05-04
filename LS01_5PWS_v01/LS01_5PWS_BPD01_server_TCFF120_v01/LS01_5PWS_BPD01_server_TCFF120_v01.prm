@@ -1,0 +1,8 @@
+[parameter:host_54_188_18_140]
+ParamName="host_54_188_18_140"
+IsEncrypt="NO"
+CurrentValue="54.188.18.140"
+Type="Custom"
+OriginalValue="54.188.18.140"
+IsServer="NO"
+Prompt=""

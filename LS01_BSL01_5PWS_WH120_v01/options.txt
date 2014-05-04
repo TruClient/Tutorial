@@ -1,9 +1,0 @@
--+
--DCCI
--D_IDA_XL
--DWINNT
--IC:\Dev\lightstreamer_basic_stock_demo_websockets_v01_plus
--IC:\Program Files (x86)\HP\LoadRunner\include
--ec:\dev\lightstreamer_basic_stock_demo_websockets_v01_plus\\logfile.log
-c:\dev\lightstreamer_basic_stock_demo_websockets_v01_plus\\combined_lightstreamer_basic_stock_demo_websockets_v01_plus.c
-c:\dev\lightstreamer_basic_stock_demo_websockets_v01_plus\\pre_cci.c

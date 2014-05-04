@@ -1,0 +1,47 @@
+Virtual User Script started at : 2014-05-02 11:15:31
+Starting action vuser_init.
+TruClient Replay for LoadRunner 12.0.0, build 1362. OS: Windows 7, initialized on 2014/05/02 at 11:15:31 (0000.000s)
+t=00000237ms: ** 1: Evaluate JavaScript code var jTransIteration = 0; ** started    [MsgId: MMSG-205180]
+t=00000442ms: ** 1: Evaluate JavaScript code var jTransIteration = 0; ** successfully completed    [MsgId: MMSG-205180]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Notify: Transaction "T01_Landing" started.
+t=00000993ms: ** 1: Navigate to 'http://' +  TC.getParam...os/DropDownDemo' ** started    [MsgId: MMSG-205180]
+t=00001754ms: ** 1: Navigate to "http://54.188.18.140/demos/DropDownDemo" ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T01_Landing" ended with "Pass" status (Duration: 0.7805 Think Time: 0.2010).
+t=00002273ms: ** 2: Evaluate JavaScript var optionNamesSet = {};...NamesAndCount(); on DROP DOWN DEMO item1item...5item16item17... listbox ** started    [MsgId: MMSG-205180]
+t=00002533ms: ** 2: Evaluate JavaScript [Code] on DROP DOWN DEMO item1item...5item16item17... listbox ** successfully completed    [MsgId: MMSG-205180]
+t=00002550ms: ** 3: For (var i = 0; true; i++) ** started    [MsgId: MMSG-205180]
+t=00002587ms: ** 3: For loop 1 ** started    [MsgId: MMSG-205180]
+t=00002598ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00003828ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00003836ms: ** 3: For loop 1 ** ended    [MsgId: MMSG-205180]
+t=00003839ms: ** 3: For loop 2 ** started    [MsgId: MMSG-205180]
+t=00003860ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00005087ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00005091ms: ** 3: For loop 2 ** ended    [MsgId: MMSG-205180]
+t=00005093ms: ** 3: For loop 3 ** started    [MsgId: MMSG-205180]
+t=00005097ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00006333ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00006352ms: ** 3: For loop 3 ** ended    [MsgId: MMSG-205180]
+t=00006355ms: ** 3: For loop 4 ** started    [MsgId: MMSG-205180]
+t=00006361ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00007594ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00007607ms: ** 3: For loop 4 ** ended    [MsgId: MMSG-205180]
+t=00007610ms: ** 3: For loop 5 ** started    [MsgId: MMSG-205180]
+t=00007616ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00008859ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00008881ms: ** 3: For loop 5 ** ended    [MsgId: MMSG-205180]
+t=00008886ms: ** 3: For loop 6 ** started    [MsgId: MMSG-205180]
+t=00008903ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00010141ms: ** 3.1: Wait 1 seconds ** successfully completed    [MsgId: MMSG-205180]
+t=00010150ms: ** 3: For loop 6 ** ended    [MsgId: MMSG-205180]
+t=00010154ms: ** 3: For loop 7 ** started    [MsgId: MMSG-205180]
+t=00010168ms: ** 3.1: Wait 1 seconds ** started    [MsgId: MMSG-205180]
+t=00010516ms: ** 3.1: Wait 1 seconds ** was stopped    [MsgId: MMSG-205180]
+t=00010532ms: ** 3: For (var i = 0; true; i++) ** was stopped    [MsgId: MMSG-205180]
+Ending action Action.
+Ending iteration 1.
+Abort was called from an action

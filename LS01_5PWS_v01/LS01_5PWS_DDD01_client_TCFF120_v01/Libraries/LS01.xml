@@ -1,0 +1,58 @@
+<truLibrary engineVersion="12.0.3521.0" timestamp="Fri May 02 2014 11:19:10 GMT-0600 (Mountain Standard Time)">
+<step type="library" stepId="step:{0efb07ef-14c6-4de0-8909-749ad123cdc3}" action="LS01" level="43" arguments="{}"><step type="function" stepId="step:{93e9204a-ed7f-4aeb-a99e-7e7d8a5d9996}" action="StockListener" level="1" arguments="{}" index="1" argsSchema="{}"><step type="block" stepId="step:{926b4fee-fd3d-47ba-88bf-68cfc984d155}" action="internal" level="43" arguments="{}"><step type="testObject" stepId="step:{9af90d49-edcc-43b3-9de5-5f694aedb356}" action="Evaluate JavaScript" level="1" index="1" testObject="testObj:{02deb541-b605-4eb7-887a-e29b17fe7acc}" arguments="{&quot;Code&quot;:&quot;(function(){\n        var options = object.options;\n        var newItems = [];\n        var deletedItems = [];\n \tvar jItemChanged = 0;\n  \n  \tfor(var i = 0; i &lt; options.length; i++) {\n  \t\tif(optionNamesSet[options[i].textContent]){\n\t\t\tdelete optionNamesSet[options[i].textContent];\n                }else{\n\t\t\tnewItems.push(options[i].textContent);\n\t\t}\n\t}\n        for (var prop in optionNamesSet) {\n\t\tif (optionNamesSet.hasOwnProperty(prop)) {\n\t\t\tdeletedItems.push(prop);\n\t\t}\n\t}\n        updateOptionNamesAndCount();\n\n\tjTransIteration = jTransIteration + 1; \n  \tTC.crossTransactionEnd(\&quot;T02X_StockList_Change\&quot;,jTransIteration,\&quot;Auto\&quot;);\n                \n})();&quot;}" autoEndEvent="Action completed"/></step></step></step>
+<testObjects><testObject testObjId="testObj:{02deb541-b605-4eb7-887a-e29b17fe7acc}" autoName="DROP DOWN DEMO item1item3item4item5item7item11item15item16item17..."><roles><role>element</role><role>focusable</role><role>listbox</role></roles><idents active="Electors"><ident type="Electors"><![CDATA[{
+"primaryScore":0.37629999999999997,
+"implData":{
+	"ctxScore":0,
+	"electors":[
+		{ "id" : "leaf", "value" : false, "score" : 0.01 }, 
+		{ "id" : "tagName", "value" : "SELECT", "score" : 0.1 }, 
+		{ "id" : "id", "value" : {"id":"stockN","isValidWord":false}, "score" : 0.3 }
+	],
+	"secondaryData":{
+		"default": {
+				"totalObjs": 1,
+				"maxObjsPerElector": 200,
+				"total": {
+						"tagName": 1,
+						"id": 1,
+						"leaf": null
+				},
+				"secondaryScore": 0,
+				"totalCandidates": 1
+		}
+}
+}
+}]]></ident><ident type="XPath"><![CDATA[{
+"primaryScore":1,
+"implData":{
+	"value":"//div[@id=\"wrap\"]/table[2]/tbody/tr[1]/td/select",
+	"suggestions":["//div[@id=\"wrap\"]/table[2]/tbody/tr[1]/td/select","//select[@id=\"stockN\"]"]
+}
+}]]></ident></idents><methods><![CDATA[{getItems:function () { 
+				//return find("xpath:option", this.object); 
+				return Array.prototype.slice.call(this.object.options, 0);
+			},
+selectItem:function (index) {
+				Mouse.down(this.object);
+				(function() {
+					var option = this.object.options[index];
+					this.object.scrollTop = option.offsetTop - this.object.options[0].offsetTop;
+					Mouse.move(option);
+					Mouse.up(option);
+					(function() {
+						if (this.object.selectedIndex != index) {
+							if (!Element.hasFocus(this.object)) this.object.focus();
+							this.object.selectedIndex = index;
+							var evt = this.object.ownerDocument.createEvent("Event");
+							evt.initEvent("change", true, true);
+							Mouse.dispachEvent(evt,  this.object);
+							this.object.blur();
+						}
+						this.endExecute(TestObject.RETCODE_SUCCEEDED);
+					}).callAsync(this);
+				}).callAsync(this);
+			}
+}]]></methods></testObject></testObjects>
+<transactions/>
+</truLibrary>
