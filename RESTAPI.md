@@ -43,7 +43,8 @@ function xhReq_add(){
 The **open** method has 3 parameters.
 
 * The "GET" action is used because the whole request is in the URL,
-  rather than a "POST" action which provides additional data in a file.
+  rather than a "POST" action which provides additional data in the request.
+  
 
 * The middle parameter specifies the action portion of the full URI to
 the website which responds to sample REST API calls:
@@ -56,10 +57,31 @@ You can change the numbers 5 and 10 specified to the right of figure1= and figur
 to see the response of the two numbers addeded together.
 (The 3rd-party website may be down when you get to it)
 
+In [another example](http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp),
+an additional parameter is added to generate a random number to ensure that data is not cached:
+
+```
+xhReq.open("GET","demo_get.asp?t=" + Math.random(),true);
+```
+
+
+* The 3rd parameter has a value of "true" for asychronouse (requiring a callback)
+ or "false" for sychronous (requiring user to wait until response is returned from server).
+
+### setRequestHeader
+
+An additional line of code is added:
+
+```
+xhReq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+```
+
 ### send
 
 The send method places the request into the network.
-null is the default value so it doesn't need to be specified.
+
+"null" is specified for GETs and replaced text for POST requests.
+
 
 ### xhReq.responseText
 
@@ -67,11 +89,29 @@ xhReq.responseText is the built-in attribute the browser populates with the resp
 
 The value can be saved to a custom variable that is poped up in an alert for the developer to dismiss.
 
+## <a name="AsyncCallingFunc">The Asynchronous Calling Function</a>
 
-## <a name="CallingFunc">The Calling Function</a>
+If it's true that an asynchronous call is specified, the responseText is received after
+an **onreadystatechange** event occurs with an OK (200) response code:
+
+```
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+```
+
+For those who are uncomfortable with the number 4 (as a bad luck word) in
+xmlhttp.readyState==4, instead use xmlhttp.readyState.DONE.
+
+### <a name="CallingFunc">The Synchronous Calling Function</a>
 
 
-## <a name="IEVariant">Variant code for Microsoft IE 5 and 6</a>
+
+### <a name="IEVariant">Variant code for Microsoft IE 5 and 6</a>
 
 Ironically, Microsoft was the first to have its internet browser send async code, in IE 5,
 in an ActivX component
