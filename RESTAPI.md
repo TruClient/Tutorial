@@ -1,37 +1,34 @@
-This script presents an example of how to create a simple web service, from the ground up, within TruClient.
-
-Let's first make sure JavaScript code is placed in a 
-TruClient script the code above is within the **JS-functions.js** file 
-automatically created in every TruClient script.
-The code above is also within
-
-```
-function xhReq_synchronous_call(){
-}
-```
+This script presents an example of how to code a simple web service call, from the ground up, within TruClient.
 
 ## Calling Code
 
 To code a call to the JavaSceipt function from within TruClient:
-
-To define a call of this function within Truclient:
 
  1. Create a new TruClient Firefox script.
  2. Click **Develop Script** for the Firefox window.
  3. Click on Toolbox and its **Miscellaneous** tab.
  4. Drag **Evaluate JavaScript** and drop on the steps pane.
  5. Click on **[Code]** to open the dialog.
- 6. In the Arguments: Code text field, type the function name `"xhReq_synchronous_call()"`, including the quotes.
- 7. Click the Run icon. If you get "is not defined" exception, there's a typo somewhere.
+ 6. In the Arguments: Code text field, type a function name including the quotes,
+    and without the () parentheses usually specificed in calls of JavaScript functions.
+  For example:
+  
+  `"xhReq_synchronous_call"`
 
+ 7. Click the Run icon. If you get "is not defined" exception if the function is not defined.
+
+ In TruClient scripts, JavaScript functions and its code is coded within the **JS-functions.js** file 
+ automatically created in every TruClient script.
+
+ 8. Click the Save icon (diskette) to save the code.
+ 9. Exit the browser to return to VuGen.
 
 
 ## <a name="NoJQuery"> No jQuery</a>
 
-Before we begin, note that most front-end developers today would code web service using 
-a **$.query** function from the jQuery library. 
-
-However, here we instead use the **window.XMLHttpReques**t object natively recognized by browsers processing HTML4 and 5:
+Even though most front-end developers today code web service using 
+a **$.query** function from the jQuery library, 
+with TruClient we instead use the **window.XMLHttpReques**t object natively recognized by browsers processing HTML4 and 5:
 
 ```
 var xhReq = new XMLHttpRequest();
