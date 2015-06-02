@@ -1,15 +1,17 @@
-This is an example of how to create a web service call within TruClient, 
-using the **window.XMLHttpReques**t object natively recognized by all browsers.
+This script presents an example of how to create a simple web service, from the ground up, within TruClient, 
+
+Before we begin, note that most front-end developers today would code web service using 
+a **$.query** function from the jQuery library. 
+
+However, here we instead use the **window.XMLHttpReques**t object natively recognized by browsers processing HTML4 and 5:
 
 ```
 var xhReq = new XMLHttpRequest();
 ```
 
-This is used instead of calls to the **$.query** function in the jQuery library 
-which most front-end JavaScript developers "blindly" adopt today.
-
-Using the native object requires no additional memory to hold jQuery.
+Using this native object requires no additional memory to hold jQuery.
 Having less code to execute within TruClient means scripts execute faster.
+
 
 **xhReq** is "hungarian notation" for XML HTTP Request.
 Other examples may use a different instatiated object (instance) name than "xhReq":
