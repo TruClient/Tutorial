@@ -40,7 +40,12 @@ function xhReq_add(){
 
 ### open URL
 
-The **open** method specifies the action portion of the full URI to
+The **open** method has 3 parameters.
+
+* The "GET" action is used because the whole request is in the URL,
+  rather than a "POST" action which provides additional data in a file.
+
+* The middle parameter specifies the action portion of the full URI to
 the website which responds to sample REST API calls:
 
 ```
