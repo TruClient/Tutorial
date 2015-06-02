@@ -25,6 +25,7 @@ to make a **sychronous** call is:
  var xhReq = new XMLHttpRequest();
  xhReq.open("GET", "sumGet.phtml?figure1=5&figure2=10", false);
  xhReq.send(null);
+ 
  var serverResponse = xhReq.responseText;
  alert(serverResponse); // Shows "15"
  ```
@@ -37,7 +38,9 @@ The code above is also within
 function xhReq_add(){
 ```
 
-The Open method specifies the action portion of the full URI to
+### open URL
+
+The **open** method specifies the action portion of the full URI to
 the website which responds to sample REST API calls:
 
 ```
@@ -48,11 +51,31 @@ You can change the numbers 5 and 10 specified to the right of figure1= and figur
 to see the response of the two numbers addeded together.
 (The 3rd-party website may be down when you get to it)
 
+### send
 
-## <a name="CallingFunc">Variant code for Microsoft IE 5 and 6</a>
+The send method places the request into the network.
+null is the default value so it doesn't need to be specified.
+
+### xhReq.responseText
+
+xhReq.responseText is the built-in attribute the browser populates with the response to the request sent.
+
+The value can be saved to a custom variable that is poped up in an alert for the developer to dismiss.
 
 
 ## <a name="CallingFunc">The Calling Function</a>
+
+
+## <a name="IEVariant">Variant code for Microsoft IE 5 and 6</a>
+
+Ironically, Microsoft was the first to have its internet browser send async code, in IE 5,
+in an ActivX component
+
+However, other browsers came to use a different function.
+
+So as of IE7 Microsoft relented and switched to the "industry standard".
+
+### Other Examples
 
 If you want a self-contained example:
 http://www.w3schools.com/ajax/tryit.asp?filename=tryajax_callback provides a complete example
