@@ -11,11 +11,12 @@ which most front-end JavaScript developers "blindly" adopt today.
 Using the native object requires no additional memory to hold jQuery.
 Having less code to execute within TruClient means scripts execute faster.
 
+**xhReq** is "hungarian notation" for XML HTTP Request.
 Other examples may use a different instatiated object (instance) name than "xhReq":
-* "result" is used in http://rest.elkstein.org/2008/02/using-rest-in-javascript.html
+* "result." is used in http://rest.elkstein.org/2008/02/using-rest-in-javascript.html
+* "xmlhttp." ins http://www.w3schools.com/ajax/tryit.asp?filename=tryajax_first
 * http://stackoverflow.com/questions/8567114/how-to-make-an-ajax-call-without-jquery
 * http://blog.garstasio.com/you-dont-need-jquery/ajax/  by Ray Nicols who explains it all to someone who only knows jQuery.
-* http://www.w3schools.com/ajax/tryit.asp?filename=tryajax_first
 
 
 Native JavaScript code [from this website](http://ajaxpatterns.org/XMLHttpRequest_Call)
@@ -64,9 +65,22 @@ an additional parameter is added to generate a random number to ensure that data
 xhReq.open("GET","demo_get.asp?t=" + Math.random(),true);
 ```
 
-
 * The 3rd parameter has a value of "true" for asychronouse (requiring a callback)
  or "false" for sychronous (requiring user to wait until response is returned from server).
+
+### setTimeout
+
+In case the server is stuck in a loop, [this website](http://ajaxpatterns.org/XMLHttpRequest_Call#Detecting_Errors)
+recommends this code to know when to abort the call so processing can continue:
+
+```
+   var requestTimer = setTimeout(function() {
+     xhReq.abort();
+     // Handle timeout situation, e.g. Retry or inform user.
+   }, MAXIMUM_WAITING_TIME);
+ ```
+
+
 
 ### setRequestHeader
 
@@ -127,3 +141,6 @@ http://www.w3schools.com/ajax/tryit.asp?filename=tryajax_callback provides a com
 
   // Cross-browser native JavaScript to call REST API:
   // From http://rest.elkstein.org/2008/02/using-rest-in-javascript.html
+
+A more complete real-life example is
+http://geoserver.geo-solutions.it/edu/en/rest/js_rest_examples.html#
