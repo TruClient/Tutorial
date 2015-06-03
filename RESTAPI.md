@@ -42,7 +42,8 @@ in a Microsoft-specific ActivX component:
 However, other browsers came to use a different object natively recognized by browsers processing HTML4 and 5:
 
 ```
-var xhReq = new XMLHttpRequest();
+if (window.XMLHttpRequest) {      // FireFox, Safari, etc.
+  var xhReq = new XMLHttpRequest();
 ```
 
 As of IE7 Microsoft relented and switched to this "industry standard".
