@@ -154,7 +154,7 @@ xmlhttp.onreadystatechange=function()
 ```
 
 For those who are uncomfortable with the number 4 (as a bad luck word) in
-xmlhttp.readyState==4, instead use xmlhttp.readyState.DONE.
+xhReq.readyState == 4, instead use built-in constant **XMLHhttpRequest.DONE**.
 
 ### <a name="CallingFunc">The Synchronous Calling Function</a>
 
