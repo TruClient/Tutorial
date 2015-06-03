@@ -15,9 +15,9 @@ To code a call to the JavaSceipt function from within TruClient:
   
   `"xhReq_synchronous_call"`
 
- 7. Click the Run icon. If you get "is not defined" exception if the function is not defined.
+ 7. Click the Run icon, knowing that a "is not defined" exception is issued if the function is not defined.
 
- In TruClient scripts, JavaScript functions and its code is coded within the **JS-functions.js** file 
+ In TruClient scripts, JavaScript functions are coded within the **JS-functions.js** file 
  automatically created in every TruClient script.
 
  8. Click the Save icon (diskette) to save the code.
@@ -28,14 +28,24 @@ To code a call to the JavaSceipt function from within TruClient:
 
 Even though most front-end developers today code web service using 
 a **$.query** function from the jQuery library, 
-with TruClient we instead use the **window.XMLHttpReques**t object natively recognized by browsers processing HTML4 and 5:
+with TruClient we instead use native objects which require no additional memory to hold the library.
+Having less code to execute within TruClient means scripts execute faster.
+
+Ironically, Microsoft was the first to have its internet browser send async code, in IE 5,
+in a Microsoft-specific ActivX component:
+
+```
+  if (window.ActiveXObject) {  // MSIE 5 & 6:
+    xhReq = new ActiveXObject("Microsoft.XMLHTTP");
+```
+
+However, other browsers came to use a different object natively recognized by browsers processing HTML4 and 5:
 
 ```
 var xhReq = new XMLHttpRequest();
 ```
 
-Using this native object requires no additional memory to hold jQuery.
-Having less code to execute within TruClient means scripts execute faster.
+As of IE7 Microsoft relented and switched to this "industry standard".
 
 
 **xhReq** is "hungarian notation" for XML HTTP Request.
@@ -146,14 +156,6 @@ xmlhttp.readyState==4, instead use xmlhttp.readyState.DONE.
 
 
 
-### <a name="IEVariant">Variant code for Microsoft IE 5 and 6</a>
-
-Ironically, Microsoft was the first to have its internet browser send async code, in IE 5,
-in an ActivX component
-
-However, other browsers came to use a different function.
-
-So as of IE7 Microsoft relented and switched to the "industry standard".
 
 ### Other Examples
 
