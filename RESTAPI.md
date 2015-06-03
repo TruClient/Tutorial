@@ -27,7 +27,8 @@ To call a JavaSceipt function from within TruClient:
 ## <a name="NoJQuery"> No jQuery</a>
 
 Even though most front-end developers today code web service using 
-a **$.query** function from the jQuery library, 
+a **$.query** function from the <a target="_blank" href="http://api.jquery.com/jQuery.ajax/">
+jQuery xhr API library</a>, 
 with TruClient we instead use native objects which require no additional memory to hold the library.
 Having less code to execute within TruClient means scripts execute faster.
 
