@@ -165,6 +165,7 @@ xhReq.readyState == 4, instead use built-in constant **XMLHhttpRequest.DONE**.
 
 If you want a self-contained example:
 http://www.w3schools.com/ajax/tryit.asp?filename=tryajax_callback provides a complete example
+calling a file (named ajax_info.txt).
 
   // Cross-browser native JavaScript to call REST API:
   // From http://rest.elkstein.org/2008/02/using-rest-in-javascript.html
