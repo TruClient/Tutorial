@@ -1,8 +1,8 @@
 This script presents an example of how to code a simple web service call, from the ground up, within TruClient.
 
-## Calling Code
+## Calling JavaScript Functions
 
-To code a call to the JavaSceipt function from within TruClient:
+To call a JavaSceipt function from within TruClient:
 
  1. Create a new TruClient Firefox script.
  2. Click **Develop Script** for the Firefox window.
