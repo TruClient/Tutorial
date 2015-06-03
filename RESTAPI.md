@@ -50,6 +50,8 @@ if (window.XMLHttpRequest) {      // FireFox, Safari, etc.
 As of IE7 Microsoft relented and recognize this "industry standard" for instantiating the AJAX object. 
 
 
+## Instantiate as xhReq vs. xmlhttp
+
 **xhReq** is "hungarian notation" for XML HTTP Request.
 Other examples may use a different instatiated object (instance) name than "xhReq":
 * "result." is used in http://rest.elkstein.org/2008/02/using-rest-in-javascript.html
