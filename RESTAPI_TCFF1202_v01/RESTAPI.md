@@ -76,7 +76,7 @@ to make a **sychronous** call is:
 
 ### open URL
 
-The **open** method has 3 parameters.
+The **open** method has 3 parameters.asychronouse
 
 * The "GET" action is used because the whole request is in the URL,
   rather than a "POST" action which provides additional data in the request.
@@ -100,7 +100,7 @@ an additional parameter is added to generate a random number to ensure that data
 xhReq.open("GET","demo_get.asp?t=" + Math.random(),true);
 ```
 
-* The 3rd parameter has a value of "true" for asychronouse (requiring a callback)
+* The 3rd parameter has a value of "true" for asychronous (requiring a **callback** function to receive returned data)
  or "false" for sychronous (requiring user to wait until response is returned from server).
 
 ### setTimeout
