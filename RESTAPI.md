@@ -35,8 +35,8 @@ Ironically, Microsoft was the first to have its internet browser send async code
 in a Microsoft-specific ActivX component:
 
 ```
-  if (window.ActiveXObject) {  // MSIE 5 & 6:
-    xhReq = new ActiveXObject("Microsoft.XMLHTTP");
+ if (window.ActiveXObject) {  // MSIE 5 & 6:
+   xhReq = new ActiveXObject("Microsoft.XMLHTTP");
 ```
 
 However, other browsers came to use a different object natively recognized by browsers processing HTML4 and 5:
@@ -46,7 +46,7 @@ if (window.XMLHttpRequest) {      // FireFox, Safari, etc.
   var xhReq = new XMLHttpRequest();
 ```
 
-As of IE7 Microsoft relented and switched to this "industry standard".
+As of IE7 Microsoft relented and recognize this "industry standard" for instantiating the AJAX object. 
 
 
 **xhReq** is "hungarian notation" for XML HTTP Request.
